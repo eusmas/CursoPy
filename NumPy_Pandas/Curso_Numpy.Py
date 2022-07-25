@@ -56,7 +56,33 @@ matriz=np.array(matriz)
 
 #__________________
 #Se pueden llamar valores segun alguna condicion, por ejemplo, llamar los numeros mayores a 5
-print(matriz[matriz%3==1])
+#print(matriz[matriz%3==1])
 
 
 
+#_____________________________
+
+# #asi se puede crear un array con un tipo de dato preestablecido
+# arr2=np.array([1,2,3,4,5,6,7,8,9], dtype="float64")
+# print(arr2.dtype)
+# print(arr2)
+
+# #de esta forma se puede cambiar el tipo de dato de un array ya creado
+# arr2=np.array([1,2,3,4,5,6,7,8,9])
+# arr2=arr2.astype(np.float64)
+# print(arr2.dtype)
+
+# arr2=np.array([1,2,3,4,5,6,7,8,9])
+# arr2=arr2.astype(np.bool8)
+# print(arr2.dtype)
+# print(arr2)
+
+# arr2=np.array([1,2,3,4,5,6,7,8,9])
+# arr2=arr2.astype(np.str_)
+# print(arr2.dtype)
+# print(arr2)
+
+arr2=np.array([1,2,3,4,5,6,7,8,9])
+arr2=arr2.astype(np.int8)
+print(arr2.dtype)
+print(arr2)
