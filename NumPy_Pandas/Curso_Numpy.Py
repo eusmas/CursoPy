@@ -82,7 +82,58 @@ matriz=np.array(matriz)
 # print(arr2.dtype)
 # print(arr2)
 
-arr2=np.array([1,2,3,4,5,6,7,8,9])
-arr2=arr2.astype(np.int8)
-print(arr2.dtype)
-print(arr2)
+# arr2=np.array([1,2,3,4,5,6,7,8,9])
+# arr2=arr2.astype(np.int8)
+# print(arr2.dtype)
+# print(arr2)
+
+#_______________________________________
+#Dimensiones
+
+#elemento de 0 dimensiones, es un unico valor
+scalar=np.array(42)
+print(scalar)
+print(scalar.ndim)
+
+#elemento de 1 dimension, es un vector
+vector=np.array([1,2,3])
+print(vector)
+print(vector.ndim)
+
+#elemento de 2 dimensiones, es una matriz
+matriz=np.array([[1,2,3], [4,5,6]])
+print(matriz)
+print(matriz.ndim)
+
+#elemento de X dimensiones, se denomina Tensor
+tensor=np.array([[[1,2,3], [4,5,6]], [[7,8,9], [10,11,12]]])
+print(tensor)
+print(tensor.ndim)
+
+#se define un vector con 10 dimensiones
+vectorDos=np.array([1,2,3],ndmin=10)
+print(vectorDos)
+print(vectorDos.ndim)
+
+#para agregar una nueva dimensiones a algo ya creado
+#en Python, el 0 son las filas, el 1 son las columnas
+expand=np.expand_dims(np.array([1,2,3]), axis=0)
+
+print(expand)
+print(expand.ndim)
+
+
+#eliminar dimensiones que no se estan usando
+vectorTres=np.squeeze(vectorDos)
+print(vectorTres, vectorTres.ndim)
+
+
+#Definir un tensor con 5 dimensiones, luego agregar una, borrar 2
+tensorEus=np.array([[[1,2,3],[2,3,4]],[[3,4,5],[3,4,5]]], ndmin=5)
+print(tensorEus, tensorEus.ndim)
+
+tensorEus=np.expand_dims(tensorEus, axis=0)
+print(tensorEus, tensorEus.ndim)
+
+tensorEus=np.squeeze(tensorEus)
+print(tensorEus, tensorEus.ndim)
