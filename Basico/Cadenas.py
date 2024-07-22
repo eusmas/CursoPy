@@ -30,3 +30,4 @@ print(nombre.lower()) #pone todo en minuscula
 print(nombre.replace("o","l"))          #reemplazar un caracter por otro
 
 print(nombre.format(edad))
+#test 2
